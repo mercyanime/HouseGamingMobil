@@ -6,7 +6,7 @@
     <title>Películas - House Gaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         * {
@@ -42,29 +42,7 @@
             z-index: 1;
         }
 
-        /* TÍTULO: en su lugar correcto, más arriba */
-        .texto-titulo {
-            position: absolute;
-            top: clamp(7%, 9vh, 12%);
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Rock Salt', cursive;
-            font-size: clamp(32px, 5vw, 52px);
-            color: #ffffff;
-            letter-spacing: clamp(2px, 0.5vw, 5px);
-            word-spacing: clamp(8px, 1.5vw, 16px);
-            text-align: center;
-            text-shadow: 
-                0 0 4px #fff,
-                0 0 10px #fff,
-                0 0 22px #fff,
-                0 0 40px rgba(255,255,255,0.75);
-            z-index: 10;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        /* Cuadro de películas: más arriba y pequeño */
+        /* Cuadro de películas: posición y tamaño */
         .cuadro-texto {
             position: absolute;
             top: 22vh;
@@ -122,7 +100,7 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* ✅ Barra de navegación EXACTAMENTE como enviaste */
+        /* Barra de navegación tal cual la enviaste */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -171,10 +149,6 @@
 <body>
     <div class="contenedor">
         <img src="7b9c90bac1ed97426b342427ba5d9dd5.jpg" alt="Fondo Películas" class="imagen-fondo">
-
-        <div class="texto-titulo">
-            HOUSE GAMING
-        </div>
 
         <!-- Cuadro de contenido -->
         <div class="cuadro-texto">
