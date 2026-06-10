@@ -17,34 +17,90 @@
         body {
             width: 100vw;
             height: 100vh;
-            background-color: #000000;
             color: #ffffff;
-            font-family: 'Rajdhani', sans-serif;
             overflow-x: hidden;
             position: relative;
         }
-        /* Título con brillo */
-        .titulo-seccion {
+
+        /* Contenedor general */
+        .contenedor {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Imagen de fondo a pantalla completa */
+        .imagen-fondo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
             position: absolute;
-            top: 30vh;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Cuadro de contenido */
+        .cuadro-texto {
+            position: absolute;
+            top: 22vh;
             left: 50%;
             transform: translateX(-50%);
-            font-size: clamp(36px, 9vw, 56px);
-            letter-spacing: 3px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            text-shadow: 
-                0 0 4px #fff,
-                0 0 10px #fff,
-                0 0 22px rgba(255, 255, 255, 0.8);
-            white-space: nowrap;
+            width: 90%;
+            max-width: 310px;
+            padding: 1.3rem 1.5rem;
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.25),
+                        inset 0 0 12px rgba(255, 255, 255, 0.08);
+            text-align: center;
+            z-index: 15;
         }
-        .titulo-seccion i {
-            font-size: clamp(40px, 10vw, 60px);
-            filter: drop-shadow(0 0 8px #fff);
+
+        .cuadro-texto h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(23px, 5vw, 29px);
+            font-weight: 600;
+            margin-bottom: 0.9rem;
+            line-height: 1.1;
+            letter-spacing: 1.2px;
         }
-        /* ✅ Barra IGUAL a la principal, en la misma posición */
+
+        .cuadro-texto p {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(13px, 2.9vw, 16px);
+            line-height: 1.55;
+            font-weight: 400;
+            text-align: justify;
+            hyphens: auto;
+            margin-bottom: 1.3rem;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 0.65rem 1.6rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(14px, 3.3vw, 18px);
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(135deg, #990000, #ff1a1a);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+
+        .boton:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
+        }
+
+        /* ✅ Barra de navegación SIMPLE, SIN EFECTOS DE LUZ/NEÓN */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -54,10 +110,8 @@
             height: clamp(70px, 12vh, 90px);
             background: rgba(20, 0, 0, 0.85);
             border-radius: 50px;
-            box-shadow: 
-                0 0 18px rgba(255, 0, 0, 0.25), 
-                inset 0 0 8px rgba(255, 0, 0, 0.12),
-                0 0 25px rgba(255, 0, 0, 0.3);
+            box-shadow: none;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -70,62 +124,68 @@
             align-items: center;
             gap: clamp(3px, 0.8vh, 6px);
             color: #cccccc;
+            font-family: 'Rajdhani', sans-serif;
             font-size: clamp(12px, 2vw, 16px);
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: color 0.25s ease;
         }
         .nav-item i {
-            font-size: clamp(24px, 4.5vw, 32px);
-        }
-        /* Resaltar la sección actual */
-        .nav-item.activo {
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+            font-size: clamp(22px, 4vw, 30px);
         }
         .nav-item:hover,
         .nav-item:active {
-            color: #ff3333;
-            transform: scale(1.08);
-            text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+            color: #ffffff;
+            transform: none;
+            text-shadow: none;
+        }
+        .nav-item.home i { color: #ffffff; }
+        .nav-item.activo {
+            color: #ffffff;
+            text-shadow: none;
         }
     </style>
 </head>
 <body>
+    <div class="contenedor">
+        <!-- Cambia esta ruta por la imagen de fondo que uses para juegos -->
+        <img src="imagen-juegos.jpg" alt="Fondo Juegos" class="imagen-fondo">
 
-    <h1 class="titulo-seccion">
-        <i class="bi bi-controller"></i>
-        SECCIÓN JUEGOS
-    </h1>
+        <!-- Cuadro de contenido de juegos -->
+        <div class="cuadro-texto">
+            <h1>Juegos</h1>
+            <p>Encuentra los mejores sitios para descargar o jugar tus juegos favoritos de forma segura y rápida.</p>
+            <a href="#" target="_blank" class="boton">Ver Juegos</a>
+        </div>
 
-    <!-- Barra de navegación en la posición correcta -->
-    <div class="barra-nav">
-        <a href="index.html" class="nav-item">
-            <i class="bi bi-house-fill"></i>
-            <span>Home</span>
-        </a>
-        <a href="juegos.html" class="nav-item activo">
-            <i class="bi bi-controller"></i>
-            <span>Juegos</span>
-        </a>
-        <a href="anime.html" class="nav-item">
-            <i class="bi bi-display"></i>
-            <span>Anime</span>
-        </a>
-        <a href="peliculas.html" class="nav-item">
-            <i class="bi bi-film"></i>
-            <span>Películas</span>
-        </a>
-        <a href="pc.html" class="nav-item">
-            <i class="bi bi-cpu"></i>
-            <span>PC</span>
-        </a>
-        <a href="mercy.html" class="nav-item">
-            <i class="bi bi-person"></i>
-            <span>Mercy</span>
-        </a>
+        <!-- Barra de navegación -->
+        <div class="barra-nav">
+            <a href="index.html" class="nav-item home">
+                <i class="bi bi-house-fill"></i>
+                <span>Home</span>
+            </a>
+            <a href="juegos.html" class="nav-item activo">
+                <i class="bi bi-controller"></i>
+                <span>Juegos</span>
+            </a>
+            <a href="anime.html" class="nav-item">
+                <i class="bi bi-display"></i>
+                <span>Anime</span>
+            </a>
+            <a href="peliculas.html" class="nav-item">
+                <i class="bi bi-film"></i>
+                <span>Películas</span>
+            </a>
+            <a href="pc.html" class="nav-item">
+                <i class="bi bi-cpu"></i>
+                <span>PC</span>
+            </a>
+            <a href="mercy.html" class="nav-item">
+                <i class="bi bi-person"></i>
+                <span>Mercy</span>
+            </a>
+        </div>
     </div>
-
 </body>
 </html>
