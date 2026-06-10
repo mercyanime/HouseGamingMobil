@@ -23,7 +23,7 @@
             position: relative;
         }
 
-        /* ✅ Imagen de fondo que ocupa TODA la pantalla */
+        /* Imagen a pantalla completa */
         .fondo-completo {
             position: fixed;
             top: 0;
@@ -34,23 +34,22 @@
             z-index: 1;
         }
 
-        /* Contenedor para centrar el cuadro de texto en toda la pantalla */
+        /* Cuadro más arriba y más pequeño */
         .contenedor-texto {
             position: relative;
             width: 100%;
-            height: calc(100vh - 110px);
+            height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* ⬆️ Lo ponemos más arriba */
+            padding-top: 18vh; /* Ajusta la altura */
             z-index: 2;
-            padding: 1.5rem;
         }
 
-        /* Cuadro épico igual al diseño */
         .cuadro-texto {
-            max-width: 420px;
-            width: 100%;
-            padding: 2.2rem;
+            max-width: 360px; /* 📏 Más pequeño */
+            width: 90%;
+            padding: 1.6rem 1.8rem;
             background: rgba(0, 0, 0, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
@@ -59,31 +58,30 @@
             text-align: center;
         }
 
-        /* Título */
+        /* Tamaños reducidos */
         .titulo {
-            font-size: clamp(28px, 7vw, 36px);
+            font-size: clamp(26px, 6vw, 32px);
             font-weight: 500;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.2rem;
             line-height: 1.1;
             letter-spacing: 1.2px;
         }
 
-        /* Párrafo justificado */
         .descripcion {
-            font-size: clamp(15px, 3.5vw, 19px);
-            line-height: 1.65;
+            font-size: clamp(14px, 3.2vw, 17px);
+            line-height: 1.6;
             font-weight: 400;
             text-align: justify;
             hyphens: auto;
-            margin-bottom: 2.2rem;
+            margin-bottom: 1.6rem;
             width: 100%;
         }
 
-        /* Botón */
+        /* Botón proporcionado */
         .boton {
             display: inline-block;
-            padding: 0.85rem 2.2rem;
-            font-size: clamp(16px, 4vw, 20px);
+            padding: 0.7rem 1.8rem;
+            font-size: clamp(15px, 3.8vw, 19px);
             font-weight: 500;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
@@ -92,7 +90,7 @@
             text-decoration: none;
             box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
             transition: all 0.3s ease;
-            min-width: 160px;
+            min-width: 150px;
         }
 
         .boton:hover {
@@ -100,7 +98,7 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* Barra de navegación en la parte inferior */
+        /* Barra de navegación EXACTAMENTE igual a la anterior */
         .barra-nav {
             position: fixed;
             bottom: clamp(4%, 6vh, 8%);
@@ -130,7 +128,7 @@
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
         }
         .nav-item i {
             font-size: clamp(24px, 4.5vw, 32px);
@@ -149,10 +147,8 @@
 </head>
 <body>
 
-    <!-- ✅ Imagen de fondo a pantalla completa -->
     <div class="fondo-completo"></div>
 
-    <!-- Cuadro con el texto -->
     <div class="contenedor-texto">
         <div class="cuadro-texto">
             <h1 class="titulo">Películas</h1>
@@ -163,7 +159,6 @@
         </div>
     </div>
 
-    <!-- Barra de navegación -->
     <div class="barra-nav">
         <a href="index.html" class="nav-item">
             <i class="bi bi-house-fill"></i>
