@@ -36,7 +36,7 @@
             padding-top: 1rem;
         }
 
-        /* Título modificado */
+        /* Título */
         .titulo-pagina {
             font-size: clamp(24px, 5vw, 30px);
             font-weight: 600;
@@ -45,11 +45,11 @@
             color: #ffffff;
         }
 
-        /* 🎠 Carrusel mucho más pequeño */
+        /* 🎠 Carrusel SIN bordes */
         .carrusel {
             width: 82%;
             max-width: 360px;
-            height: 42vh; /* Altura reducida */
+            height: 42vh;
             overflow-x: auto;
             overflow-y: hidden;
             scroll-snap-type: x mandatory;
@@ -57,33 +57,39 @@
             display: flex;
             gap: 0;
             border-radius: 14px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+            background-color: #000000;
+            /* Quitados bordes y sombra roja */
             -ms-overflow-style: none;
             scrollbar-width: none;
-            border: 2px solid rgba(255, 0, 0, 0.2);
-            background-color: #0a0000;
-            padding: 0.4rem;
         }
         .carrusel::-webkit-scrollbar {
             display: none;
         }
 
+        /* Cada diapositiva en columna */
         .slide {
             flex: 0 0 100%;
             width: 100%;
             height: 100%;
             scroll-snap-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3rem;
         }
 
         .slide img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            max-height: 48%;
             object-fit: contain;
             background-color: #000;
             border-radius: 6px;
         }
 
-        /* Indicadores más pequeños */
+        /* Indicadores */
         .indicadores {
             display: flex;
             gap: 0.6rem;
@@ -97,7 +103,7 @@
             transition: all 0.3s ease;
         }
         .punto.activo {
-            background-color: #ff2222;
+            background-color: #ffffff;
             transform: scale(1.15);
         }
 
@@ -139,25 +145,33 @@
 <body>
     <div class="contenedor">
 
-        <!-- Título cambiado -->
         <h1 class="titulo-pagina">🎮 House Gaming</h1>
 
-        <!-- Carrusel deslizante reducido -->
+        <!-- 🎠 Carrusel con imágenes agrupadas -->
         <div class="carrusel" id="carrusel">
-            <div class="slide"><img src="1.png" alt="Sección 1"></div>
-            <div class="slide"><img src="2.png" alt="Sección 2"></div>
-            <div class="slide"><img src="3.png" alt="Sección 3"></div>
-            <div class="slide"><img src="4.png" alt="Sección 4"></div>
-            <div class="slide"><img src="5.png" alt="Sección 5"></div>
-            <div class="slide"><img src="6.png" alt="Sección 6"></div>
-            <div class="slide"><img src="7.png" alt="Sección 7"></div>
+            <!-- 1 y 2 arriba y abajo -->
+            <div class="slide">
+                <img src="1.png" alt="Sección 1 arriba">
+                <img src="2.png" alt="Sección 1 abajo">
+            </div>
+            <!-- 3 y 4 arriba y abajo -->
+            <div class="slide">
+                <img src="3.png" alt="Sección 2 arriba">
+                <img src="4.png" alt="Sección 2 abajo">
+            </div>
+            <!-- 5 y 6 arriba y abajo -->
+            <div class="slide">
+                <img src="5.png" alt="Sección 3 arriba">
+                <img src="6.png" alt="Sección 3 abajo">
+            </div>
+            <!-- Solo 7 arriba -->
+            <div class="slide">
+                <img src="7.png" alt="Sección 4">
+            </div>
         </div>
 
         <div class="indicadores" id="indicadores">
             <div class="punto activo"></div>
-            <div class="punto"></div>
-            <div class="punto"></div>
-            <div class="punto"></div>
             <div class="punto"></div>
             <div class="punto"></div>
             <div class="punto"></div>
