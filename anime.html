@@ -6,7 +6,7 @@
     <title>Anime - House Gaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         * {
@@ -19,75 +19,52 @@
             height: 100vh;
             background-color: #000000;
             color: #ffffff;
+            font-family: 'Playfair Display', serif;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Contenedor principal: 2 mitades iguales */
-        .contenedor-principal {
+        /* Contenedor: mitad imagen, mitad texto */
+        .contenedor {
             width: 100%;
-            height: calc(100vh - 110px); /* Espacio para la barra de navegación */
+            height: calc(100vh - 110px);
             display: flex;
-            flex-direction: row;
+            align-items: stretch;
         }
 
-        /* Lado izquierdo: imagen al 50% */
+        /* Imagen con el nombre EXACTO que me diste */
         .lado-imagen {
             width: 50%;
             height: 100%;
-            background: url('anime-bg.jpg') center / cover no-repeat;
+            background: url('ea557993966a4e18928efd28be68f90f.jpg') center center / cover no-repeat;
         }
 
-        /* Lado derecho: texto al 50%, igual que en la imagen */
+        /* Texto alineado tal cual el diseño */
         .lado-texto {
             width: 50%;
             height: 100%;
-            padding: 2.5rem 2rem;
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding: 3rem 2.5rem;
+            text-align: right;
         }
 
-        /* Título tal cual */
         .titulo {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 7vw, 44px);
-            font-weight: normal;
-            text-align: left;
+            font-size: clamp(36px, 8vw, 48px);
+            font-weight: 500;
+            margin-bottom: 3rem;
+            line-height: 1.2;
         }
 
-        /* Texto tal cual, misma distribución */
         .descripcion {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(18px, 4vw, 24px);
+            font-size: clamp(18px, 4.5vw, 24px);
             line-height: 1.7;
-            text-align: left;
-            white-space: normal;
+            font-weight: 400;
         }
 
-        /* Adaptación para móvil: se mantiene la proporción visual */
-        @media (max-width: 768px) {
-            .contenedor-principal {
-                flex-direction: row;
-            }
-            .lado-imagen {
-                width: 50%;
-                height: 100%;
-            }
-            .lado-texto {
-                width: 50%;
-                padding: 2rem 1.5rem;
-                gap: 2rem;
-            }
-            .titulo {
-                font-size: clamp(24px, 6vw, 36px);
-            }
-            .descripcion {
-                font-size: clamp(15px, 3.5vw, 20px);
-            }
-        }
-
-        /* 📌 Barra de navegación sin cambios, en su sitio */
+        /* Barra de navegación en su lugar, sin cambios */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -136,21 +113,20 @@
 </head>
 <body>
 
-    <div class="contenedor-principal">
+    <div class="contenedor">
         <div class="lado-imagen"></div>
         <div class="lado-texto">
-            <h1 class="titulo">Anime Series</h1>
+            <h1 class="titulo">Anime<br>Series</h1>
             <p class="descripcion">
-Si te gusta el Anime, aquí podrás
-encontrar una gran variedad, solo
-debes darle click al botón, para ir
-directo al sitio web que
+Si te gusta el Anime, aquí podrás<br>
+encontrar una gran variedad, solo<br>
+debes darle click al botón, para ir<br>
+directo al sitio web que<br>
 recomendamos.
             </p>
         </div>
     </div>
 
-    <!-- Barra de navegación -->
     <div class="barra-nav">
         <a href="index.html" class="nav-item">
             <i class="bi bi-house-fill"></i>
