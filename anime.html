@@ -24,7 +24,7 @@
             position: relative;
         }
 
-        /* Contenedor igual al original */
+        /* Contenedor igual */
         .contenedor {
             width: 100%;
             height: calc(100vh - 110px);
@@ -32,43 +32,65 @@
             align-items: stretch;
         }
 
-        /* Imagen sin cambios */
+        /* Imagen igual */
         .lado-imagen {
             width: 45%;
             height: 100%;
             background: url('ea557993966a4e18928efd28be68f90f.jpg') center left / cover no-repeat;
         }
 
-        /* Lado del texto: centrado verticalmente, justificado */
+        /* Texto justificado */
         .lado-texto {
             width: 55%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-end;
+            align-items: center;
             padding: 1.5rem 2.5rem;
-            text-align: justify; /* ✅ Justificado igual que en Word */
+            text-align: justify;
         }
 
-        /* Título: sigue alineado a la derecha */
+        /* Título en una sola línea, justificado */
         .titulo {
-            font-size: clamp(26px, 6vw, 36px);
+            font-size: clamp(28px, 6vw, 38px);
             font-weight: 500;
             margin-bottom: 2rem;
-            line-height: 1.1;
-            text-align: right;
+            line-height: 1.2;
+            text-align: justify;
+            width: 100%;
         }
 
-        /* Texto: tamaño reducido, justificado y espaciado correcto */
+        /* Párrafo ajustado */
         .descripcion {
-            font-size: clamp(14px, 3.5vw, 19px);
-            line-height: 1.65;
+            font-size: clamp(15px, 3.5vw, 20px);
+            line-height: 1.7;
             font-weight: 400;
-            hyphens: auto; /* Mejora la separación de sílabas */
+            hyphens: auto;
+            margin-bottom: 2.5rem;
+            width: 100%;
         }
 
-        /* Barra de navegación SIN MODIFICACIONES */
+        /* Botón bonito */
+        .boton {
+            padding: 0.9rem 2.2rem;
+            font-size: clamp(16px, 4vw, 21px);
+            font-weight: 500;
+            color: #ffffff;
+            background: linear-gradient(135deg, #8b0000, #ff2222);
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .boton:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 22px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Barra de navegación SIN CAMBIOS */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -120,10 +142,11 @@
     <div class="contenedor">
         <div class="lado-imagen"></div>
         <div class="lado-texto">
-            <h1 class="titulo">Anime<br>Series</h1>
+            <h1 class="titulo">Anime Series</h1>
             <p class="descripcion">
                 Si te gusta el Anime, aquí podrás encontrar una gran variedad, solo debes darle click al botón, para ir directo al sitio web que recomendamos.
             </p>
+            <a href="https://tioanime.com/" target="_blank" class="boton">TioAnime</a>
         </div>
     </div>
 
