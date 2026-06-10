@@ -73,26 +73,30 @@
             color: #e2e2e2;
         }
 
-        /* Botones MÁS PEQUEÑOS */
+        /* 📌 Botones CUADRADOS y muy pequeños */
         .botones-secciones {
             display: flex;
             flex-direction: column;
-            gap: 1.4rem;
+            gap: 1rem;
             margin-bottom: 5rem;
         }
 
         .boton {
             display: block;
-            padding: 1rem;
-            font-size: clamp(26px, 6vw, 34px);
-            font-weight: 600;
+            width: 100%;
+            max-width: 220px;
+            height: 45px; /* Altura igual al ancho para ser cuadrado */
+            padding: 0;
+            font-size: clamp(18px, 4vw, 21px);
+            font-weight: 500;
             color: #ffffff;
             text-decoration: none;
             background: linear-gradient(180deg, #ff2222, #990000);
-            border-radius: 14px;
+            border-radius: 4px; /* Bordes rectos para forma cuadrada */
             text-align: center;
-            box-shadow: 0 0 16px rgba(255, 0, 0, 0.45);
-            border: none;
+            line-height: 45px; /* Centrar texto verticalmente */
+            box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+            margin: 0 auto; /* Centrados en la pantalla */
         }
 
         /* Barra de navegación igual al resto */
@@ -106,7 +110,7 @@
             background: rgba(20, 0, 0, 0.85);
             border-radius: 50px;
             box-shadow: none;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255,255,255,0.15);
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -134,7 +138,6 @@
             transform: none;
             text-shadow: none;
         }
-        .nav-item.home i { color: #ffffff; }
         .nav-item.activo {
             color: #ffffff;
             text-shadow: none;
@@ -144,7 +147,6 @@
 <body>
     <div class="contenedor">
 
-        <!-- Imagen con el nombre nuevo exacto -->
         <div class="cabecera">
             <img 
                 src="731d49ad491b09e73f16601684ca80f8.jpg" 
@@ -162,6 +164,7 @@
             <p>Nació como una idea de uno de mis familiares así que decidí apoyar con mis conocimientos, puedes visitarnos en el barrio Intipungo. Av. Vicente Rocafuerte y Cristóbal Colón</p>
         </div>
 
+        <!-- Botones cuadrados -->
         <div class="botones-secciones">
             <a href="apps.html" class="boton">Apps</a>
             <a href="discord.html" class="boton">Discord</a>
