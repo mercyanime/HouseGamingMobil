@@ -31,72 +31,72 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Imagen configurada correctamente */
+        /* Cabecera con imagen */
         .cabecera {
             display: flex;
             align-items: flex-start;
-            gap: 1.2rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
+        /* Configuración EXACTA para que cargue bien */
         .foto-mercy {
-            width: 120px;
-            height: 120px;
-            border-radius: 20px;
+            width: 130px;
+            height: 130px;
+            border-radius: 24px;
             object-fit: cover;
             object-position: center;
             flex-shrink: 0;
-            border: 1px solid rgba(255,255,255,0.15);
-            background-color: #111;
+            border: 1px solid rgba(255,255,255,0.2);
+            background-color: #111111;
+            min-width: 130px;
+            min-height: 130px;
         }
 
         .texto-presentacion {
-            font-size: clamp(17px, 3.8vw, 20px);
-            line-height: 1.5;
+            font-size: clamp(18px, 4vw, 22px);
+            line-height: 1.6;
             color: #ffffff;
-            margin-top: 0.3rem;
+            margin-top: 0.5rem;
         }
 
+        /* Título y descripción */
         .info-proyecto h2 {
-            font-size: clamp(30px, 7vw, 42px);
+            font-size: clamp(36px, 8vw, 48px);
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         .info-proyecto p {
-            font-size: clamp(17px, 3.8vw, 20px);
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
-            color: #e0e0e0;
+            font-size: clamp(18px, 4vw, 22px);
+            line-height: 1.7;
+            margin-bottom: 3.5rem;
+            color: #e2e2e2;
         }
 
-        /* Botones */
+        /* Botones igual a la captura */
         .botones-secciones {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
+            gap: 1.8rem;
+            margin-bottom: 5rem;
         }
 
         .boton {
-            display: inline-block;
-            padding: 1.2rem 2rem;
-            font-size: clamp(28px, 8vw, 45px);
+            display: block;
+            padding: 1.5rem;
+            font-size: clamp(32px, 9vw, 50px);
             font-weight: 600;
             color: #ffffff;
             text-decoration: none;
-            background: linear-gradient(135deg, #990000, #ff1a1a);
-            border-radius: 12px;
+            background: linear-gradient(180deg, #ff2222, #990000);
+            border-radius: 18px;
             text-align: center;
-            box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
-            transition: transform 0.2s ease;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            border: none;
         }
 
-        .boton:hover {
-            transform: scale(1.03);
-        }
-
-        /* Barra de navegación simple */
+        /* Barra de navegación */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -145,13 +145,14 @@
 <body>
     <div class="contenedor">
 
-        <!-- Imagen con nombre EXACTO que diste -->
+        <!-- IMAGEN CON NOMBRE EXACTO Y RUTA CORRECTA -->
         <div class="cabecera">
             <img 
                 src="Screenshot_20260610-130037.jpg" 
                 alt="Foto de Mercy" 
                 class="foto-mercy"
-                loading="lazy"
+                loading="eager"
+                onerror="this.src=''; this.alt='Imagen no encontrada'"
             >
             <div class="texto-presentacion">
                 Soy Mercy, tengo título en Comunicación digital usando solo IA es posible crear esta página web.
@@ -163,7 +164,6 @@
             <p>Nació como una idea de uno de mis familiares así que decidí apoyar con mis conocimientos, puedes visitarnos en el barrio Intipungo. Av. Vicente Rocafuerte y Cristóbal Colón</p>
         </div>
 
-        <!-- Botones actualizados -->
         <div class="botones-secciones">
             <a href="apps.html" class="boton">Apps</a>
             <a href="discord.html" class="boton">Discord</a>
