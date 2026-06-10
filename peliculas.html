@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Películas - House Gaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Misma proporción que el resto de páginas */
+        .contenedor {
+            width: 100%;
+            height: calc(100vh - 110px);
+            display: flex;
+            align-items: stretch;
+        }
+
+        /* Imagen con el nombre exacto */
+        .lado-imagen {
+            width: 45%;
+            height: 100%;
+            background: url('7b9c90bac1ed97426b342427ba5d9dd5.jpg') center center / cover no-repeat;
+        }
+
+        /* Zona de texto */
+        .lado-texto {
+            width: 55%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 2.5rem;
+            text-align: justify;
+        }
+
+        /* Cuadro épico para el texto */
+        .cuadro-texto {
+            width: 100%;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.65);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15),
+                        inset 0 0 12px rgba(255, 255, 255, 0.08);
+        }
+
+        /* Título */
+        .titulo {
+            font-size: clamp(26px, 6vw, 34px);
+            font-weight: 500;
+            margin-bottom: 1.8rem;
+            line-height: 1;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 1.2px;
+        }
+
+        /* Párrafo */
+        .descripcion {
+            font-size: clamp(14px, 3.2vw, 18px);
+            line-height: 1.6;
+            font-weight: 400;
+            hyphens: auto;
+            word-spacing: normal;
+            margin-bottom: 2.2rem;
+            width: 100%;
+        }
+
+        /* Botón con enlace ya puesto */
+        .boton {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            font-size: clamp(15px, 3.8vw, 20px);
+            font-weight: 500;
+            color: #ffffff;
+            background: linear-gradient(135deg, #990000, #ff1a1a);
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .boton:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 22px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Barra de navegación idéntica */
+        .barra-nav {
+            position: absolute;
+            bottom: clamp(4%, 6vh, 8%);
+            left: 50%;
+            transform: translateX(-50%);
+            width: clamp(92%, 96vw, 680px);
+            height: clamp(70px, 12vh, 90px);
+            background: rgba(20, 0, 0, 0.85);
+            border-radius: 50px;
+            box-shadow: 
+                0 0 18px rgba(255, 0, 0, 0.25), 
+                inset 0 0 8px rgba(255, 0, 0, 0.12),
+                0 0 25px rgba(255, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 clamp(8px, 2vw, 16px);
+            z-index: 20;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(3px, 0.8vh, 6px);
+            color: #cccccc;
+            font-size: clamp(12px, 2vw, 16px);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .nav-item i {
+            font-size: clamp(24px, 4.5vw, 32px);
+        }
+        .nav-item.activo {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+        }
+        .nav-item:hover,
+        .nav-item:active {
+            color: #ff3333;
+            transform: scale(1.08);
+            text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="lado-imagen"></div>
+        <div class="lado-texto">
+            <div class="cuadro-texto">
+                <h1 class="titulo">Películas</h1>
+                <p class="descripcion">
+                    Si te interesa ver películas en tu navegador aquí te dejamos alternativas para ver tus películas favoritas.
+                </p>
+                <!-- ✅ Enlace ya agregado: cambia esto si quieres otra dirección -->
+                <a href="https://pelisplus.me" target="_blank" class="boton">Ver Películas</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="barra-nav">
+        <a href="index.html" class="nav-item">
+            <i class="bi bi-house-fill"></i>
+            <span>Home</span>
+        </a>
+        <a href="juegos.html" class="nav-item">
+            <i class="bi bi-controller"></i>
+            <span>Juegos</span>
+        </a>
+        <a href="anime.html" class="nav-item">
+            <i class="bi bi-display"></i>
+            <span>Anime</span>
+        </a>
+        <a href="peliculas.html" class="nav-item activo">
+            <i class="bi bi-film"></i>
+            <span>Películas</span>
+        </a>
+        <a href="pc.html" class="nav-item">
+            <i class="bi bi-cpu"></i>
+            <span>PC</span>
+        </a>
+        <a href="mercy.html" class="nav-item">
+            <i class="bi bi-person"></i>
+            <span>Mercy</span>
+        </a>
+    </div>
+
+</body>
+</html>
