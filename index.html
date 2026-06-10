@@ -32,7 +32,7 @@
             object-position: center top;
             display: block;
         }
-        /* TÍTULO: en su lugar correcto, más arriba */
+        /* TÍTULO */
         .texto-titulo {
             position: absolute;
             top: clamp(7%, 9vh, 12%);
@@ -53,6 +53,8 @@
             pointer-events: none;
             white-space: nowrap;
         }
+
+        /* ✅ Barra de navegación SIMPLE, SIN EFECTOS DE NEÓN */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -62,7 +64,8 @@
             height: clamp(70px, 12vh, 90px);
             background: rgba(20, 0, 0, 0.85);
             border-radius: 50px;
-            box-shadow: 0 0 18px rgba(255, 0, 0, 0.25), inset 0 0 8px rgba(255, 0, 0, 0.12);
+            box-shadow: none;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -80,16 +83,16 @@
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: color 0.25s ease;
         }
         .nav-item i {
             font-size: clamp(22px, 4vw, 30px);
         }
         .nav-item:hover,
         .nav-item:active {
-            color: #ff3333;
-            transform: scale(1.08);
-            text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+            color: #ffffff;
+            transform: none;
+            text-shadow: none;
         }
         .nav-item.home i { color: #ffffff; }
     </style>
@@ -102,29 +105,29 @@
             HOUSE GAMING
         </div>
 
-        <!-- ✅ BARRA ACTUALIZADA: AHORA ENLAZA A TUS ARCHIVOS HTML -->
+        <!-- Barra de navegación funcional -->
         <div class="barra-nav">
             <a href="index.html" class="nav-item home">
                 <i class="bi bi-house-fill"></i>
                 <span>Home</span>
             </a>
-            <a href="juegos.html" class="nav-item juegos">
+            <a href="juegos.html" class="nav-item">
                 <i class="bi bi-controller"></i>
                 <span>Juegos</span>
             </a>
-            <a href="anime.html" class="nav-item anime">
+            <a href="anime.html" class="nav-item">
                 <i class="bi bi-display"></i>
                 <span>Anime</span>
             </a>
-            <a href="peliculas.html" class="nav-item peliculas">
+            <a href="peliculas.html" class="nav-item">
                 <i class="bi bi-film"></i>
                 <span>Películas</span>
             </a>
-            <a href="pc.html" class="nav-item pc">
+            <a href="pc.html" class="nav-item">
                 <i class="bi bi-cpu"></i>
                 <span>PC</span>
             </a>
-            <a href="mercy.html" class="nav-item mercy">
+            <a href="mercy.html" class="nav-item">
                 <i class="bi bi-person"></i>
                 <span>Mercy</span>
             </a>
