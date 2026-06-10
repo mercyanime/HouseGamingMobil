@@ -17,99 +17,92 @@
         body {
             width: 100vw;
             height: 100vh;
-            background-color: #000000;
             color: #ffffff;
             font-family: 'Playfair Display', serif;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Contenedor con las mismas proporciones */
-        .contenedor {
+        /* ✅ Imagen de fondo que ocupa TODA la pantalla */
+        .fondo-completo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('7b9c90bac1ed97426b342427ba5d9dd5.jpg') center center / cover no-repeat;
+            z-index: 1;
+        }
+
+        /* Contenedor para centrar el cuadro de texto en toda la pantalla */
+        .contenedor-texto {
+            position: relative;
             width: 100%;
             height: calc(100vh - 110px);
             display: flex;
-            align-items: stretch;
-        }
-
-        /* ✅ Imagen CENTRADA totalmente, tal como la enviaste */
-        .lado-imagen {
-            width: 45%;
-            height: 100%;
-            background: url('7b9c90bac1ed97426b342427ba5d9dd5.jpg') center center / cover no-repeat;
-            background-position: center center;
-        }
-
-        /* Zona del texto */
-        .lado-texto {
-            width: 55%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1.5rem 2.5rem;
-            text-align: justify;
+            z-index: 2;
+            padding: 1.5rem;
         }
 
-        /* Cuadro decorativo */
+        /* Cuadro épico igual al diseño */
         .cuadro-texto {
+            max-width: 420px;
             width: 100%;
-            padding: 2rem;
-            background: rgba(0, 0, 0, 0.65);
-            border: 2px solid rgba(255, 255, 255, 0.25);
+            padding: 2.2rem;
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15),
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.25),
                         inset 0 0 12px rgba(255, 255, 255, 0.08);
+            text-align: center;
         }
 
         /* Título */
         .titulo {
-            font-size: clamp(26px, 6vw, 34px);
+            font-size: clamp(28px, 7vw, 36px);
             font-weight: 500;
             margin-bottom: 1.8rem;
-            line-height: 1;
-            text-align: center;
-            width: 100%;
+            line-height: 1.1;
             letter-spacing: 1.2px;
         }
 
-        /* Párrafo */
+        /* Párrafo justificado */
         .descripcion {
-            font-size: clamp(14px, 3.2vw, 18px);
-            line-height: 1.6;
+            font-size: clamp(15px, 3.5vw, 19px);
+            line-height: 1.65;
             font-weight: 400;
+            text-align: justify;
             hyphens: auto;
-            word-spacing: normal;
             margin-bottom: 2.2rem;
             width: 100%;
         }
 
-        /* Botón funcional */
+        /* Botón */
         .boton {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            font-size: clamp(15px, 3.8vw, 20px);
+            padding: 0.85rem 2.2rem;
+            font-size: clamp(16px, 4vw, 20px);
             font-weight: 500;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
             transition: all 0.3s ease;
-            min-width: 180px;
-            text-align: center;
+            min-width: 160px;
         }
 
         .boton:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 22px rgba(255, 0, 0, 0.7);
+            box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* Barra de navegación igual al resto */
+        /* Barra de navegación en la parte inferior */
         .barra-nav {
-            position: absolute;
+            position: fixed;
             bottom: clamp(4%, 6vh, 8%);
             left: 50%;
             transform: translateX(-50%);
@@ -125,7 +118,7 @@
             align-items: center;
             justify-content: space-around;
             padding: 0 clamp(8px, 2vw, 16px);
-            z-index: 20;
+            z-index: 3;
         }
         .nav-item {
             display: flex;
@@ -156,19 +149,21 @@
 </head>
 <body>
 
-    <div class="contenedor">
-        <div class="lado-imagen"></div>
-        <div class="lado-texto">
-            <div class="cuadro-texto">
-                <h1 class="titulo">Películas</h1>
-                <p class="descripcion">
-                    Si te interesa ver películas en tu navegador aquí te dejamos alternativas para ver tus películas favoritas.
-                </p>
-                <a href="https://pelisplus.me" target="_blank" class="boton">Ver Películas</a>
-            </div>
+    <!-- ✅ Imagen de fondo a pantalla completa -->
+    <div class="fondo-completo"></div>
+
+    <!-- Cuadro con el texto -->
+    <div class="contenedor-texto">
+        <div class="cuadro-texto">
+            <h1 class="titulo">Películas</h1>
+            <p class="descripcion">
+                Si te interesa ver películas en tu navegador aquí te dejamos alternativas para ver tus películas favoritas.
+            </p>
+            <a href="https://pelisplus.me" target="_blank" class="boton">Ver Películas</a>
         </div>
     </div>
 
+    <!-- Barra de navegación -->
     <div class="barra-nav">
         <a href="index.html" class="nav-item">
             <i class="bi bi-house-fill"></i>
