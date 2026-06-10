@@ -6,7 +6,7 @@
     <title>Películas - House Gaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         * {
@@ -18,12 +18,12 @@
             width: 100vw;
             height: 100vh;
             color: #ffffff;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Rajdhani', sans-serif;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Imagen a pantalla completa */
+        /* Imagen de fondo a pantalla completa */
         .fondo-completo {
             position: fixed;
             top: 0;
@@ -42,12 +42,12 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding-top: 12vh; /* Más arriba */
+            padding-top: 12vh;
             z-index: 2;
         }
 
         .cuadro-texto {
-            max-width: 300px; /* Más reducido */
+            max-width: 300px;
             width: 90%;
             padding: 1.2rem 1.4rem;
             background: rgba(0, 0, 0, 0.75);
@@ -60,7 +60,7 @@
 
         .titulo {
             font-size: clamp(22px, 5vw, 28px);
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 0.8rem;
             line-height: 1.1;
             letter-spacing: 1.2px;
@@ -96,7 +96,7 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* ✅ Barra de navegación CON LAS MISMAS MEDIDAS EXACTAS que el resto */
+        /* ✅ Barra de navegación EXACTAMENTE igual a la que enviaste */
         .barra-nav {
             position: fixed;
             bottom: clamp(4%, 6vh, 8%);
@@ -108,7 +108,7 @@
             border-radius: 50px;
             box-shadow: 
                 0 0 18px rgba(255, 0, 0, 0.25), 
-                inset 0 0 8px rgba(255, 255, 255, 0.12),
+                inset 0 0 8px rgba(255, 0, 0, 0.12),
                 0 0 25px rgba(255, 0, 0, 0.3);
             display: flex;
             align-items: center;
@@ -126,7 +126,7 @@
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
         }
         .nav-item i {
             font-size: clamp(24px, 4.5vw, 32px);
