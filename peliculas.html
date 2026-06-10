@@ -6,7 +6,7 @@
     <title>Películas - House Gaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Rock+Salt&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         * {
@@ -18,37 +18,60 @@
             width: 100vw;
             height: 100vh;
             color: #ffffff;
-            font-family: 'Rajdhani', sans-serif;
             overflow-x: hidden;
             position: relative;
         }
 
+        /* Contenedor general */
+        .contenedor {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
         /* Imagen de fondo a pantalla completa */
-        .fondo-completo {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .imagen-fondo {
             width: 100%;
             height: 100%;
-            background: url('7b9c90bac1ed97426b342427ba5d9dd5.jpg') center center / cover no-repeat;
+            object-fit: cover;
+            object-position: center center;
+            position: absolute;
+            top: 0;
+            left: 0;
             z-index: 1;
         }
 
-        /* Cuadro de texto más arriba y más pequeño */
-        .contenedor-texto {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 13vh;
-            z-index: 2;
+        /* TÍTULO: en su lugar correcto, más arriba */
+        .texto-titulo {
+            position: absolute;
+            top: clamp(7%, 9vh, 12%);
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Rock Salt', cursive;
+            font-size: clamp(32px, 5vw, 52px);
+            color: #ffffff;
+            letter-spacing: clamp(2px, 0.5vw, 5px);
+            word-spacing: clamp(8px, 1.5vw, 16px);
+            text-align: center;
+            text-shadow: 
+                0 0 4px #fff,
+                0 0 10px #fff,
+                0 0 22px #fff,
+                0 0 40px rgba(255,255,255,0.75);
+            z-index: 10;
+            pointer-events: none;
+            white-space: nowrap;
         }
 
+        /* Cuadro de películas: más arriba y pequeño */
         .cuadro-texto {
-            max-width: 310px;
+            position: absolute;
+            top: 22vh;
+            left: 50%;
+            transform: translateX(-50%);
             width: 90%;
+            max-width: 310px;
             padding: 1.3rem 1.5rem;
             background: rgba(0, 0, 0, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -56,9 +79,11 @@
             box-shadow: 0 0 25px rgba(255, 0, 0, 0.25),
                         inset 0 0 12px rgba(255, 255, 255, 0.08);
             text-align: center;
+            z-index: 15;
         }
 
-        .titulo {
+        .cuadro-texto h1 {
+            font-family: 'Rajdhani', sans-serif;
             font-size: clamp(23px, 5vw, 29px);
             font-weight: 600;
             margin-bottom: 0.9rem;
@@ -66,21 +91,22 @@
             letter-spacing: 1.2px;
         }
 
-        .descripcion {
+        .cuadro-texto p {
+            font-family: 'Rajdhani', sans-serif;
             font-size: clamp(13px, 2.9vw, 16px);
             line-height: 1.55;
             font-weight: 400;
             text-align: justify;
             hyphens: auto;
             margin-bottom: 1.3rem;
-            width: 100%;
         }
 
         .boton {
             display: inline-block;
             padding: 0.65rem 1.6rem;
+            font-family: 'Rajdhani', sans-serif;
             font-size: clamp(14px, 3.3vw, 18px);
-            font-weight: 500;
+            font-weight: 600;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
             border: none;
@@ -96,25 +122,22 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* ✅ Barra de navegación IDÉNTICA a la de tus otras páginas */
+        /* ✅ Barra de navegación EXACTAMENTE como enviaste */
         .barra-nav {
-            position: fixed;
-            bottom: 0;
+            position: absolute;
+            bottom: clamp(4%, 6vh, 8%);
             left: 50%;
             transform: translateX(-50%);
             width: clamp(92%, 96vw, 680px);
             height: clamp(70px, 12vh, 90px);
             background: rgba(20, 0, 0, 0.85);
-            border-radius: 50px 50px 0 0;
-            box-shadow: 
-                0 0 18px rgba(255, 0, 0, 0.25), 
-                inset 0 0 8px rgba(255, 0, 0, 0.12),
-                0 0 25px rgba(255, 0, 0, 0.3);
+            border-radius: 50px;
+            box-shadow: 0 0 18px rgba(255, 0, 0, 0.25), inset 0 0 8px rgba(255, 0, 0, 0.12);
             display: flex;
             align-items: center;
             justify-content: space-around;
             padding: 0 clamp(8px, 2vw, 16px);
-            z-index: 3;
+            z-index: 20;
         }
         .nav-item {
             display: flex;
@@ -122,6 +145,7 @@
             align-items: center;
             gap: clamp(3px, 0.8vh, 6px);
             color: #cccccc;
+            font-family: 'Rajdhani', sans-serif;
             font-size: clamp(12px, 2vw, 16px);
             font-weight: 600;
             text-decoration: none;
@@ -129,11 +153,7 @@
             transition: all 0.25s ease;
         }
         .nav-item i {
-            font-size: clamp(24px, 4.5vw, 32px);
-        }
-        .nav-item.activo {
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+            font-size: clamp(22px, 4vw, 30px);
         }
         .nav-item:hover,
         .nav-item:active {
@@ -141,48 +161,55 @@
             transform: scale(1.08);
             text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
         }
+        .nav-item.home i { color: #ffffff; }
+        .nav-item.activo {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+        }
     </style>
 </head>
 <body>
+    <div class="contenedor">
+        <img src="7b9c90bac1ed97426b342427ba5d9dd5.jpg" alt="Fondo Películas" class="imagen-fondo">
 
-    <div class="fondo-completo"></div>
+        <div class="texto-titulo">
+            HOUSE GAMING
+        </div>
 
-    <div class="contenedor-texto">
+        <!-- Cuadro de contenido -->
         <div class="cuadro-texto">
-            <h1 class="titulo">Películas</h1>
-            <p class="descripcion">
-                Si te interesa ver películas en tu navegador aquí te dejamos alternativas para ver tus películas favoritas.
-            </p>
+            <h1>Películas</h1>
+            <p>Si te interesa ver películas en tu navegador aquí te dejamos alternativas para ver tus películas favoritas.</p>
             <a href="https://pelisplus.me" target="_blank" class="boton">Ver Películas</a>
         </div>
-    </div>
 
-    <div class="barra-nav">
-        <a href="index.html" class="nav-item">
-            <i class="bi bi-house-fill"></i>
-            <span>Home</span>
-        </a>
-        <a href="juegos.html" class="nav-item">
-            <i class="bi bi-controller"></i>
-            <span>Juegos</span>
-        </a>
-        <a href="anime.html" class="nav-item">
-            <i class="bi bi-display"></i>
-            <span>Anime</span>
-        </a>
-        <a href="peliculas.html" class="nav-item activo">
-            <i class="bi bi-film"></i>
-            <span>Películas</span>
-        </a>
-        <a href="pc.html" class="nav-item">
-            <i class="bi bi-cpu"></i>
-            <span>PC</span>
-        </a>
-        <a href="mercy.html" class="nav-item">
-            <i class="bi bi-person"></i>
-            <span>Mercy</span>
-        </a>
+        <!-- Barra de navegación -->
+        <div class="barra-nav">
+            <a href="index.html" class="nav-item home">
+                <i class="bi bi-house-fill"></i>
+                <span>Home</span>
+            </a>
+            <a href="juegos.html" class="nav-item">
+                <i class="bi bi-controller"></i>
+                <span>Juegos</span>
+            </a>
+            <a href="anime.html" class="nav-item">
+                <i class="bi bi-display"></i>
+                <span>Anime</span>
+            </a>
+            <a href="peliculas.html" class="nav-item activo">
+                <i class="bi bi-film"></i>
+                <span>Películas</span>
+            </a>
+            <a href="pc.html" class="nav-item">
+                <i class="bi bi-cpu"></i>
+                <span>PC</span>
+            </a>
+            <a href="mercy.html" class="nav-item">
+                <i class="bi bi-person"></i>
+                <span>Mercy</span>
+            </a>
+        </div>
     </div>
-
 </body>
 </html>
