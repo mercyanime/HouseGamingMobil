@@ -42,7 +42,7 @@
             z-index: 1;
         }
 
-        /* Cuadro de películas: posición y tamaño */
+        /* Cuadro de películas */
         .cuadro-texto {
             position: absolute;
             top: 22vh;
@@ -100,7 +100,7 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* Barra de navegación tal cual la enviaste */
+        /* ✅ Barra de navegación SIMPLE, SIN EFECTOS DE LUZ/NEÓN */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -110,7 +110,8 @@
             height: clamp(70px, 12vh, 90px);
             background: rgba(20, 0, 0, 0.85);
             border-radius: 50px;
-            box-shadow: 0 0 18px rgba(255, 0, 0, 0.25), inset 0 0 8px rgba(255, 0, 0, 0.12);
+            box-shadow: none;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -128,21 +129,21 @@
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: color 0.25s ease;
         }
         .nav-item i {
             font-size: clamp(22px, 4vw, 30px);
         }
         .nav-item:hover,
         .nav-item:active {
-            color: #ff3333;
-            transform: scale(1.08);
-            text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+            color: #ffffff;
+            transform: none;
+            text-shadow: none;
         }
         .nav-item.home i { color: #ffffff; }
         .nav-item.activo {
             color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+            text-shadow: none;
         }
     </style>
 </head>
