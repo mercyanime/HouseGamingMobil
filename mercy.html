@@ -31,7 +31,7 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Cabecera con imagen */
+        /* Cabecera e imagen */
         .cabecera {
             display: flex;
             align-items: flex-start;
@@ -39,18 +39,17 @@
             margin-bottom: 2.5rem;
         }
 
-        /* Configuración EXACTA para que cargue bien */
         .foto-mercy {
-            width: 130px;
-            height: 130px;
-            border-radius: 24px;
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
             object-fit: cover;
             object-position: center;
             flex-shrink: 0;
             border: 1px solid rgba(255,255,255,0.2);
             background-color: #111111;
-            min-width: 130px;
-            min-height: 130px;
+            min-width: 120px;
+            min-height: 120px;
         }
 
         .texto-presentacion {
@@ -60,43 +59,43 @@
             margin-top: 0.5rem;
         }
 
-        /* Título y descripción */
+        /* Información */
         .info-proyecto h2 {
-            font-size: clamp(36px, 8vw, 48px);
+            font-size: clamp(36px, 7vw, 44px);
             font-weight: 600;
             margin-bottom: 1.2rem;
         }
 
         .info-proyecto p {
-            font-size: clamp(18px, 4vw, 22px);
+            font-size: clamp(18px, 4vw, 21px);
             line-height: 1.7;
-            margin-bottom: 3.5rem;
+            margin-bottom: 3rem;
             color: #e2e2e2;
         }
 
-        /* Botones igual a la captura */
+        /* Botones MÁS PEQUEÑOS */
         .botones-secciones {
             display: flex;
             flex-direction: column;
-            gap: 1.8rem;
+            gap: 1.4rem;
             margin-bottom: 5rem;
         }
 
         .boton {
             display: block;
-            padding: 1.5rem;
-            font-size: clamp(32px, 9vw, 50px);
+            padding: 1rem;
+            font-size: clamp(26px, 6vw, 34px);
             font-weight: 600;
             color: #ffffff;
             text-decoration: none;
             background: linear-gradient(180deg, #ff2222, #990000);
-            border-radius: 18px;
+            border-radius: 14px;
             text-align: center;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 0 16px rgba(255, 0, 0, 0.45);
             border: none;
         }
 
-        /* Barra de navegación */
+        /* Barra de navegación igual al resto */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -145,14 +144,13 @@
 <body>
     <div class="contenedor">
 
-        <!-- IMAGEN CON NOMBRE EXACTO Y RUTA CORRECTA -->
+        <!-- Imagen con el nombre nuevo exacto -->
         <div class="cabecera">
             <img 
-                src="Screenshot_20260610-130037.jpg" 
+                src="731d49ad491b09e73f16601684ca80f8.jpg" 
                 alt="Foto de Mercy" 
                 class="foto-mercy"
                 loading="eager"
-                onerror="this.src=''; this.alt='Imagen no encontrada'"
             >
             <div class="texto-presentacion">
                 Soy Mercy, tengo título en Comunicación digital usando solo IA es posible crear esta página web.
