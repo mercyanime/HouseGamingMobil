@@ -24,7 +24,7 @@
             position: relative;
         }
 
-        /* Contenedor: mitad imagen, mitad texto */
+        /* Contenedor con proporción correcta */
         .contenedor {
             width: 100%;
             height: calc(100vh - 110px);
@@ -32,39 +32,41 @@
             align-items: stretch;
         }
 
-        /* Imagen con el nombre EXACTO que me diste */
+        /* Imagen en su posición */
         .lado-imagen {
-            width: 50%;
+            width: 45%;
             height: 100%;
-            background: url('ea557993966a4e18928efd28be68f90f.jpg') center center / cover no-repeat;
+            background: url('ea557993966a4e18928efd28be68f90f.jpg') center left / cover no-repeat;
         }
 
-        /* Texto alineado tal cual el diseño */
+        /* Texto: más pequeño, centrado verticalmente y bien ajustado */
         .lado-texto {
-            width: 50%;
+            width: 55%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: flex-end;
-            padding: 3rem 2.5rem;
+            padding: 1.5rem 2.5rem;
             text-align: right;
         }
 
+        /* Tamaño reducido del título */
         .titulo {
-            font-size: clamp(36px, 8vw, 48px);
+            font-size: clamp(32px, 7vw, 42px);
             font-weight: 500;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             line-height: 1.2;
         }
 
+        /* Tamaño reducido del texto descriptivo */
         .descripcion {
-            font-size: clamp(18px, 4.5vw, 24px);
+            font-size: clamp(17px, 4vw, 22px);
             line-height: 1.7;
             font-weight: 400;
         }
 
-        /* Barra de navegación en su lugar, sin cambios */
+        /* Barra de navegación igual al resto */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -118,9 +120,10 @@
         <div class="lado-texto">
             <h1 class="titulo">Anime<br>Series</h1>
             <p class="descripcion">
-Si te gusta el Anime, aquí podrás<br>
-encontrar una gran variedad, solo<br>
-debes darle click al botón, para ir<br>
+Si te gusta el Anime, aquí<br>
+podrás encontrar una gran<br>
+variedad, solo debes darle<br>
+click al botón, para ir<br>
 directo al sitio web que<br>
 recomendamos.
             </p>
