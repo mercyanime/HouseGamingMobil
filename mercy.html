@@ -68,11 +68,30 @@
             color: #e0e0e0;
         }
 
-        /* Títulos grandes */
-        .titulos-grandes h3 {
-            font-size: clamp(60px, 14vw, 90px);
+        /* Botones de navegación */
+        .botones-secciones {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 1.2rem 2rem;
+            font-size: clamp(28px, 8vw, 45px);
             font-weight: 600;
-            line-height: 1;
+            color: #ffffff;
+            text-decoration: none;
+            background: linear-gradient(135deg, #990000, #ff1a1a);
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+            transition: transform 0.2s ease;
+        }
+
+        .boton:hover {
+            transform: scale(1.03);
         }
 
         /* ✅ Barra de navegación igual a todas las páginas */
@@ -135,13 +154,13 @@
         <!-- Información HouseGaming -->
         <div class="info-proyecto">
             <h2>HouseGaming</h2>
-            <p>Nacio como una idea de uno de mis familiares asi que decidí apoyar con mis conocimientos, puedes visitarnos en el barrio intipungo. Av. Vicente rocafuerte y Cristóbal colon</p>
+            <p>Nació como una idea de uno de mis familiares así que decidí apoyar con mis conocimientos, puedes visitarnos en el barrio Intipungo. Av. Vicente Rocafuerte y Cristóbal Colón</p>
         </div>
 
-        <!-- Títulos grandes -->
-        <div class="titulos-grandes">
-            <h3>Apps</h3>
-            <h3>Juegos</h3>
+        <!-- Botones para cada apartado -->
+        <div class="botones-secciones">
+            <a href="apps.html" class="boton">Apps</a>
+            <a href="discord.html" class="boton">Discord</a>
         </div>
 
         <!-- Barra de navegación -->
