@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>House Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        titulo: ['Rock Salt', 'cursive']
+                    }
+                }
+            }
+        };
+        // Abre página en blanco directamente sin archivos extras
+        function abrirPaginaBlanca() {
+            const ventana = window.open("", "_blank");
+            ventana.document.write(`
+                <!DOCTYPE html>
+                <html style="margin:0;padding:0;background:#ffffff;">
+                <head><meta charset="UTF-8"><title>Nueva Página</title></head>
+                <body></body>
+                </html>
+            `);
+            ventana.document.close();
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .texto-neon-blanco {
+            color: #ffffff;
+            text-shadow: 
+                0 0 2px #fff,
+                0 0 8px #fff,
+                0 0 15px #fff,
+                0 0 30px rgba(255, 255, 255, 0.8);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .texto-neon-blanco:active {
+            transform: scale(0.97);
+            text-shadow: 
+                0 0 2px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body class="m-0 p-0 w-full h-screen overflow-hidden bg-black">
+    <div class="relative w-full h-screen">
+        <!-- Tu imagen con el nombre que me diste -->
+        <img 
+            src="1781057909260.png" 
+            alt="House Gaming" 
+            class="w-full h-full object-cover object-center"
+        >
+
+        <!-- Texto House Gaming en neón blanco, hace clic y abre página en blanco -->
+        <div 
+            onclick="abrirPaginaBlanca()"
+            class="absolute bottom-16 left-1/2 -translate-x-1/2"
+        >
+            <h1 class="texto-neon-blanco font-titulo text-4xl md:text-5xl tracking-wider">
+                House Gaming
+            </h1>
+        </div>
+    </div>
+</body>
+</html>
+
