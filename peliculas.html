@@ -23,7 +23,7 @@
             position: relative;
         }
 
-        /* Imagen de fondo a pantalla completa */
+        /* Imagen a pantalla completa */
         .fondo-completo {
             position: fixed;
             top: 0;
@@ -42,14 +42,14 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding-top: 14vh; /* Más arriba */
+            padding-top: 12vh; /* Más arriba */
             z-index: 2;
         }
 
         .cuadro-texto {
-            max-width: 320px; /* Más pequeño */
+            max-width: 300px; /* Más reducido */
             width: 90%;
-            padding: 1.4rem 1.6rem;
+            padding: 1.2rem 1.4rem;
             background: rgba(0, 0, 0, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
@@ -59,27 +59,27 @@
         }
 
         .titulo {
-            font-size: clamp(24px, 5.5vw, 30px);
+            font-size: clamp(22px, 5vw, 28px);
             font-weight: 500;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             line-height: 1.1;
             letter-spacing: 1.2px;
         }
 
         .descripcion {
-            font-size: clamp(13px, 3vw, 16px);
-            line-height: 1.55;
+            font-size: clamp(12.5px, 2.8vw, 15px);
+            line-height: 1.5;
             font-weight: 400;
             text-align: justify;
             hyphens: auto;
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.2rem;
             width: 100%;
         }
 
         .boton {
             display: inline-block;
-            padding: 0.65rem 1.6rem;
-            font-size: clamp(14px, 3.5vw, 18px);
+            padding: 0.6rem 1.5rem;
+            font-size: clamp(13px, 3.2vw, 17px);
             font-weight: 500;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
@@ -88,7 +88,7 @@
             text-decoration: none;
             box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
             transition: all 0.3s ease;
-            min-width: 140px;
+            min-width: 130px;
         }
 
         .boton:hover {
@@ -96,7 +96,7 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* ✅ Barra de navegación con MEDIDAS EXACTAS igual al resto */
+        /* ✅ Barra de navegación CON LAS MISMAS MEDIDAS EXACTAS que el resto */
         .barra-nav {
             position: fixed;
             bottom: clamp(4%, 6vh, 8%);
