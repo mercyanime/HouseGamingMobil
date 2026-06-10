@@ -42,14 +42,14 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding-top: 12vh;
+            padding-top: 13vh;
             z-index: 2;
         }
 
         .cuadro-texto {
-            max-width: 300px;
+            max-width: 310px;
             width: 90%;
-            padding: 1.2rem 1.4rem;
+            padding: 1.3rem 1.5rem;
             background: rgba(0, 0, 0, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
@@ -59,27 +59,27 @@
         }
 
         .titulo {
-            font-size: clamp(22px, 5vw, 28px);
+            font-size: clamp(23px, 5vw, 29px);
             font-weight: 600;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.9rem;
             line-height: 1.1;
             letter-spacing: 1.2px;
         }
 
         .descripcion {
-            font-size: clamp(12.5px, 2.8vw, 15px);
-            line-height: 1.5;
+            font-size: clamp(13px, 2.9vw, 16px);
+            line-height: 1.55;
             font-weight: 400;
             text-align: justify;
             hyphens: auto;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
             width: 100%;
         }
 
         .boton {
             display: inline-block;
-            padding: 0.6rem 1.5rem;
-            font-size: clamp(13px, 3.2vw, 17px);
+            padding: 0.65rem 1.6rem;
+            font-size: clamp(14px, 3.3vw, 18px);
             font-weight: 500;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
@@ -88,7 +88,7 @@
             text-decoration: none;
             box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
             transition: all 0.3s ease;
-            min-width: 130px;
+            min-width: 140px;
         }
 
         .boton:hover {
@@ -96,16 +96,16 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* ✅ Barra de navegación EXACTAMENTE igual a la que enviaste */
+        /* ✅ Barra de navegación en la POSICIÓN EXACTA igual que en Anime */
         .barra-nav {
             position: fixed;
-            bottom: clamp(4%, 6vh, 8%);
+            bottom: 0; /* Pegada al borde inferior */
             left: 50%;
             transform: translateX(-50%);
             width: clamp(92%, 96vw, 680px);
             height: clamp(70px, 12vh, 90px);
             background: rgba(20, 0, 0, 0.85);
-            border-radius: 50px;
+            border-radius: 50px 50px 0 0; /* Redondeo solo arriba */
             box-shadow: 
                 0 0 18px rgba(255, 0, 0, 0.25), 
                 inset 0 0 8px rgba(255, 0, 0, 0.12),
