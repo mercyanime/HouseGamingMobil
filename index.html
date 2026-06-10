@@ -32,10 +32,10 @@
             object-position: center top;
             display: block;
         }
-        /* TÍTULO: SOLO SUBIDO UN POCO MÁS ARRIBA */
+        /* TÍTULO: en su lugar correcto, más arriba */
         .texto-titulo {
             position: absolute;
-            top: clamp(7%, 9vh, 12%); /* Más arriba que antes */
+            top: clamp(7%, 9vh, 12%);
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Rock Salt', cursive;
@@ -102,51 +102,33 @@
             HOUSE GAMING
         </div>
 
-        <!-- BARRA CON ICONOS EXACTOS QUE PEDISTE -->
+        <!-- ✅ BARRA ACTUALIZADA: AHORA ENLAZA A TUS ARCHIVOS HTML -->
         <div class="barra-nav">
-            <div class="nav-item home" onclick="abrirPagina('Home')">
+            <a href="index.html" class="nav-item home">
                 <i class="bi bi-house-fill"></i>
                 <span>Home</span>
-            </div>
-            <div class="nav-item juegos" onclick="abrirPagina('Juegos')">
+            </a>
+            <a href="juegos.html" class="nav-item juegos">
                 <i class="bi bi-controller"></i>
                 <span>Juegos</span>
-            </div>
-            <div class="nav-item anime" onclick="abrirPagina('Anime')">
+            </a>
+            <a href="anime.html" class="nav-item anime">
                 <i class="bi bi-display"></i>
                 <span>Anime</span>
-            </div>
-            <div class="nav-item peliculas" onclick="abrirPagina('Películas')">
+            </a>
+            <a href="peliculas.html" class="nav-item peliculas">
                 <i class="bi bi-film"></i>
                 <span>Películas</span>
-            </div>
-            <div class="nav-item pc" onclick="abrirPagina('PC')">
+            </a>
+            <a href="pc.html" class="nav-item pc">
                 <i class="bi bi-cpu"></i>
                 <span>PC</span>
-            </div>
-            <div class="nav-item mercy" onclick="abrirPagina('Mercy')">
+            </a>
+            <a href="mercy.html" class="nav-item mercy">
                 <i class="bi bi-person"></i>
                 <span>Mercy</span>
-            </div>
+            </a>
         </div>
     </div>
-
-    <script>
-        function abrirPagina(nombre) {
-            const nuevaVentana = window.open("", "_blank");
-            nuevaVentana.document.write(`
-                <!DOCTYPE html>
-                <html lang="es" style="margin:0; padding:0; background:#ffffff;">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>${nombre} - House Gaming</title>
-                </head>
-                <body></body>
-                </html>
-            `);
-            nuevaVentana.document.close();
-        }
-    </script>
 </body>
 </html>
