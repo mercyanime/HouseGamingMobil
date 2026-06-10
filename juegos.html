@@ -33,36 +33,36 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-top: 1.5rem;
+            padding-top: 1rem;
         }
 
-        /* Título de la sección */
+        /* Título modificado */
         .titulo-pagina {
-            font-size: clamp(28px, 6vw, 36px);
+            font-size: clamp(24px, 5vw, 30px);
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             text-align: center;
             color: #ffffff;
         }
 
-        /* 🎠 Carrusel más pequeño */
+        /* 🎠 Carrusel mucho más pequeño */
         .carrusel {
-            width: 88%;
-            max-width: 420px;
-            height: 52vh; /* Reducimos la altura */
+            width: 82%;
+            max-width: 360px;
+            height: 42vh; /* Altura reducida */
             overflow-x: auto;
             overflow-y: hidden;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             display: flex;
             gap: 0;
-            border-radius: 16px;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+            border-radius: 14px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
             -ms-overflow-style: none;
             scrollbar-width: none;
-            border: 2px solid rgba(255, 0, 0, 0.25);
+            border: 2px solid rgba(255, 0, 0, 0.2);
             background-color: #0a0000;
-            padding: 0.5rem;
+            padding: 0.4rem;
         }
         .carrusel::-webkit-scrollbar {
             display: none;
@@ -80,28 +80,28 @@
             height: 100%;
             object-fit: contain;
             background-color: #000;
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
-        /* Indicadores */
+        /* Indicadores más pequeños */
         .indicadores {
             display: flex;
-            gap: 0.7rem;
-            margin-top: 1.2rem;
+            gap: 0.6rem;
+            margin-top: 1rem;
         }
         .punto {
-            width: 11px;
-            height: 11px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
         }
         .punto.activo {
             background-color: #ff2222;
-            transform: scale(1.2);
+            transform: scale(1.15);
         }
 
-        /* Barra de navegación igual al resto */
+        /* Barra de navegación */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -139,9 +139,10 @@
 <body>
     <div class="contenedor">
 
-        <h1 class="titulo-pagina">🎮 Catálogo de Juegos</h1>
+        <!-- Título cambiado -->
+        <h1 class="titulo-pagina">🎮 House Gaming</h1>
 
-        <!-- 🎠 Carrusel deslizante con imágenes -->
+        <!-- Carrusel deslizante reducido -->
         <div class="carrusel" id="carrusel">
             <div class="slide"><img src="1.png" alt="Sección 1"></div>
             <div class="slide"><img src="2.png" alt="Sección 2"></div>
@@ -152,7 +153,6 @@
             <div class="slide"><img src="7.png" alt="Sección 7"></div>
         </div>
 
-        <!-- Indicadores de posición -->
         <div class="indicadores" id="indicadores">
             <div class="punto activo"></div>
             <div class="punto"></div>
@@ -163,7 +163,6 @@
             <div class="punto"></div>
         </div>
 
-        <!-- Barra de navegación -->
         <div class="barra-nav">
             <a href="index.html" class="nav-item">
                 <i class="bi bi-house-fill"></i>
@@ -185,7 +184,7 @@
                 <i class="bi bi-cpu"></i>
                 <span>PC</span>
             </a>
-            <a href="mercy.html" class="nav="nav-item">
+            <a href="mercy.html" class="nav-item">
                 <i class="bi bi-person"></i>
                 <span>Mercy</span>
             </a>
