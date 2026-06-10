@@ -17,26 +17,36 @@
         body {
             width: 100vw;
             height: 100vh;
-            background-color: #000000; /* Fondo negro total */
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Rajdhani', sans-serif;
             overflow-x: hidden;
-            padding-bottom: 100px; /* Espacio para la barra de abajo */
+            position: relative;
         }
-        /* Título de la sección */
+        /* Título con brillo */
         .titulo-seccion {
-            text-align: center;
-            padding-top: 25vh;
-            font-size: clamp(36px, 8vw, 52px);
+            position: absolute;
+            top: 30vh;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(36px, 9vw, 56px);
             letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
             text-shadow: 
                 0 0 4px #fff,
                 0 0 10px #fff,
-                0 0 22px rgba(255, 0, 0, 0.7);
+                0 0 22px rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
         }
-        /* Barra de navegación IGUAL a la principal */
+        .titulo-seccion i {
+            font-size: clamp(40px, 10vw, 60px);
+            filter: drop-shadow(0 0 8px #fff);
+        }
+        /* ✅ Barra IGUAL a la principal, en la misma posición */
         .barra-nav {
-            position: fixed;
+            position: absolute;
             bottom: clamp(4%, 6vh, 8%);
             left: 50%;
             transform: translateX(-50%);
@@ -44,7 +54,10 @@
             height: clamp(70px, 12vh, 90px);
             background: rgba(20, 0, 0, 0.85);
             border-radius: 50px;
-            box-shadow: 0 0 18px rgba(255, 0, 0, 0.25), inset 0 0 8px rgba(255, 0, 0, 0.12);
+            box-shadow: 
+                0 0 18px rgba(255, 0, 0, 0.25), 
+                inset 0 0 8px rgba(255, 0, 0, 0.12),
+                0 0 25px rgba(255, 0, 0, 0.3);
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -64,7 +77,12 @@
             transition: all 0.25s ease;
         }
         .nav-item i {
-            font-size: clamp(22px, 4vw, 30px);
+            font-size: clamp(24px, 4.5vw, 32px);
+        }
+        /* Resaltar la sección actual */
+        .nav-item.activo {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
         }
         .nav-item:hover,
         .nav-item:active {
@@ -72,18 +90,16 @@
             transform: scale(1.08);
             text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
         }
-        /* Resaltar la sección actual */
-        .nav-item.activo {
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255,255,255,0.6);
-        }
     </style>
 </head>
 <body>
 
-    <h1 class="titulo-seccion">🎮 SECCIÓN JUEGOS</h1>
+    <h1 class="titulo-seccion">
+        <i class="bi bi-controller"></i>
+        SECCIÓN JUEGOS
+    </h1>
 
-    <!-- Barra de navegación inferior -->
+    <!-- Barra de navegación en la posición correcta -->
     <div class="barra-nav">
         <a href="index.html" class="nav-item">
             <i class="bi bi-house-fill"></i>
