@@ -23,7 +23,7 @@
             position: relative;
         }
 
-        /* Imagen a pantalla completa */
+        /* Imagen de fondo a pantalla completa */
         .fondo-completo {
             position: fixed;
             top: 0;
@@ -41,15 +41,15 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* ⬆️ Lo ponemos más arriba */
-            padding-top: 18vh; /* Ajusta la altura */
+            align-items: flex-start;
+            padding-top: 14vh; /* Más arriba */
             z-index: 2;
         }
 
         .cuadro-texto {
-            max-width: 360px; /* 📏 Más pequeño */
+            max-width: 320px; /* Más pequeño */
             width: 90%;
-            padding: 1.6rem 1.8rem;
+            padding: 1.4rem 1.6rem;
             background: rgba(0, 0, 0, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
@@ -58,30 +58,28 @@
             text-align: center;
         }
 
-        /* Tamaños reducidos */
         .titulo {
-            font-size: clamp(26px, 6vw, 32px);
+            font-size: clamp(24px, 5.5vw, 30px);
             font-weight: 500;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             line-height: 1.1;
             letter-spacing: 1.2px;
         }
 
         .descripcion {
-            font-size: clamp(14px, 3.2vw, 17px);
-            line-height: 1.6;
+            font-size: clamp(13px, 3vw, 16px);
+            line-height: 1.55;
             font-weight: 400;
             text-align: justify;
             hyphens: auto;
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.4rem;
             width: 100%;
         }
 
-        /* Botón proporcionado */
         .boton {
             display: inline-block;
-            padding: 0.7rem 1.8rem;
-            font-size: clamp(15px, 3.8vw, 19px);
+            padding: 0.65rem 1.6rem;
+            font-size: clamp(14px, 3.5vw, 18px);
             font-weight: 500;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
@@ -90,7 +88,7 @@
             text-decoration: none;
             box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
             transition: all 0.3s ease;
-            min-width: 150px;
+            min-width: 140px;
         }
 
         .boton:hover {
@@ -98,7 +96,7 @@
             box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
         }
 
-        /* Barra de navegación EXACTAMENTE igual a la anterior */
+        /* ✅ Barra de navegación con MEDIDAS EXACTAS igual al resto */
         .barra-nav {
             position: fixed;
             bottom: clamp(4%, 6vh, 8%);
@@ -110,7 +108,7 @@
             border-radius: 50px;
             box-shadow: 
                 0 0 18px rgba(255, 0, 0, 0.25), 
-                inset 0 0 8px rgba(255, 0, 0, 0.12),
+                inset 0 0 8px rgba(255, 255, 255, 0.12),
                 0 0 25px rgba(255, 0, 0, 0.3);
             display: flex;
             align-items: center;
