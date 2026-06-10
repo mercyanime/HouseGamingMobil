@@ -21,6 +21,7 @@
             font-family: 'Rajdhani', sans-serif;
             overflow-x: hidden;
             position: relative;
+            background-color: #000000;
         }
 
         .contenedor {
@@ -28,74 +29,68 @@
             height: 100vh;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
         }
 
         .imagen-fondo {
-            width: 100%;
+            width: 50%;
             height: 100%;
             object-fit: cover;
-            object-position: center center;
+            object-position: center left;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
         }
 
-        .cuadro-texto {
+        .contenido-texto {
             position: absolute;
-            top: 22vh;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 310px;
-            padding: 1.3rem 1.5rem;
-            background: rgba(0, 0, 0, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.25),
-                        inset 0 0 12px rgba(255, 255, 255, 0.08);
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
             text-align: center;
             z-index: 15;
         }
 
-        .cuadro-texto h1 {
-            font-size: clamp(23px, 5vw, 29px);
+        .contenido-texto h1 {
+            font-size: clamp(32px, 7vw, 48px);
             font-weight: 600;
-            margin-bottom: 0.9rem;
+            margin-bottom: 1.5rem;
             line-height: 1.1;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
         }
 
-        .cuadro-texto p {
-            font-size: clamp(13px, 2.9vw, 16px);
-            line-height: 1.55;
+        .contenido-texto p {
+            font-size: clamp(16px, 3.5vw, 22px);
+            line-height: 1.6;
             font-weight: 400;
+            margin-bottom: 2rem;
             text-align: justify;
-            hyphens: auto;
-            margin-bottom: 1.3rem;
         }
 
         .boton {
             display: inline-block;
-            padding: 0.65rem 1.6rem;
-            font-size: clamp(14px, 3.3vw, 18px);
+            padding: 1rem 2.5rem;
+            font-size: clamp(18px, 4vw, 24px);
             font-weight: 600;
             color: #ffffff;
             background: linear-gradient(135deg, #990000, #ff1a1a);
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             text-decoration: none;
-            box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
             transition: all 0.3s ease;
-            min-width: 140px;
+            min-width: 180px;
         }
 
         .boton:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 26px rgba(255, 0, 0, 0.75);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
         }
 
-        /* Barra de navegación que enviaste */
+        /* ✅ Barra de navegación ORIGINAL tal como la enviaste */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -143,14 +138,15 @@
 </head>
 <body>
     <div class="contenedor">
-        <img src="imagen-anime.jpg" alt="Fondo Anime" class="imagen-fondo">
+        <img src="ea557993966a4e18928efd28be68f90f.jpg" alt="Fondo Anime" class="imagen-fondo">
 
-        <div class="cuadro-texto">
+        <div class="contenido-texto">
             <h1>Anime Series</h1>
             <p>Si te gusta el Anime, aquí podrás encontrar una gran variedad, solo debes darle click al botón, para ir directo al sitio web que recomendamos.</p>
             <a href="https://tioanime.com" target="_blank" class="boton">TioAnime</a>
         </div>
 
+        <!-- Barra de navegación original sin modificaciones -->
         <div class="barra-nav">
             <a href="index.html" class="nav-item home">
                 <i class="bi bi-house-fill"></i>
