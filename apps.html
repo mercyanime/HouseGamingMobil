@@ -32,37 +32,37 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 4rem;
+            padding-top: 3rem;
         }
 
         .titulo-pagina {
-            font-size: clamp(36px, 8vw, 48px);
+            font-size: clamp(28px, 6vw, 36px);
             font-weight: 600;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             text-align: center;
         }
 
-        /* Lista de botones */
+        /* 📌 Botones SÚPER PEQUEÑOS */
         .lista-apps {
             width: 100%;
-            max-width: 550px;
+            max-width: 450px;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
             margin-bottom: 5rem;
         }
 
         .boton-app {
             display: block;
-            padding: 1.1rem;
-            font-size: clamp(24px, 5vw, 32px);
-            font-weight: 600;
+            padding: 0.7rem; /* Espacio interno reducido */
+            font-size: clamp(18px, 4vw, 22px); /* Letra pequeña */
+            font-weight: 500;
             color: #ffffff;
             text-decoration: none;
             background: linear-gradient(180deg, #ff2222, #990000);
-            border-radius: 14px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 0 16px rgba(255, 0, 0, 0.45);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
             transition: transform 0.2s ease;
         }
 
@@ -70,7 +70,7 @@
             transform: scale(1.02);
         }
 
-        /* Barra de navegación igual a todas las páginas */
+        /* Barra de navegación igual al resto */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
