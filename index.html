@@ -6,7 +6,8 @@
     <title>House Gaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -24,7 +25,7 @@
             height: 100%;
             position: relative;
         }
-        /* Tu imagen de fondo con nombre exacto */
+        /* Imagen de fondo */
         .imagen-fondo {
             width: 100%;
             height: 100%;
@@ -32,15 +33,17 @@
             object-position: center;
             display: block;
         }
-        /* Texto House Gaming en neón blanco */
+        /* Texto House Gaming arriba, en neón blanco */
         .texto-titulo {
             position: absolute;
-            bottom: 120px;
+            top: 12%;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Rock Salt', cursive;
-            font-size: 32px;
+            font-size: 36px;
             color: #ffffff;
+            text-align: center;
+            line-height: 1.2;
             text-shadow: 
                 0 0 3px #fff,
                 0 0 8px #fff,
@@ -52,22 +55,22 @@
         /* Barra de navegación estilo negro y rojo */
         .barra-nav {
             position: absolute;
-            bottom: 25px;
+            bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
             width: 94%;
             max-width: 520px;
-            height: 75px;
-            background: linear-gradient(90deg, #0a0a0f 0%, #120000 50%, #0a0a0f 100%);
-            border: 1px solid rgba(255, 0, 0, 0.3);
-            border-radius: 20px;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.25), inset 0 0 8px rgba(255, 0, 0, 0.1);
+            height: 80px;
+            background: linear-gradient(90deg, #08080c 0%, #1a0000 50%, #08080c 100%);
+            border: 1px solid rgba(255, 0, 0, 0.35);
+            border-radius: 22px;
+            box-shadow: 0 0 18px rgba(255, 0, 0, 0.28), inset 0 0 10px rgba(255, 0, 0, 0.12);
             display: flex;
             align-items: center;
             justify-content: space-around;
             z-index: 20;
         }
-        /* Elementos de cada opción */
+        /* Cada elemento del menú */
         .nav-item {
             display: flex;
             flex-direction: column;
@@ -75,61 +78,57 @@
             gap: 4px;
             color: #cccccc;
             font-family: 'Rajdhani', sans-serif;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             text-decoration: none;
+            cursor: pointer;
             transition: all 0.25s ease;
         }
         .nav-item i {
-            font-size: 22px;
+            font-size: 24px;
         }
-        /* Efecto al pasar/tocar */
-        .nav-item:hover, .nav-item:active {
+        /* Efecto al tocar */
+        .nav-item:hover,
+        .nav-item:active {
             color: #ff2222;
-            text-shadow: 0 0 8px rgba(255, 34, 34, 0.7);
-            transform: scale(1.08);
-        }
-        /* Estilo para abrir página en blanco */
-        .nueva-pagina {
-            cursor: pointer;
+            text-shadow: 0 0 10px rgba(255, 34, 34, 0.75);
+            transform: scale(1.07);
         }
     </style>
-    <!-- Iconos -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="contenedor">
-        <!-- Imagen de fondo -->
+        <!-- Tu imagen con nombre exacto -->
         <img src="3d8ce0998c8e212b0b91c4ce3780cc44.jpg" alt="House Gaming" class="imagen-fondo">
 
-        <!-- Texto principal -->
+        <!-- Texto principal arriba -->
         <div class="texto-titulo">
-            House Gaming
+            HOUSE<br>GAMING
         </div>
 
-        <!-- Barra de navegación -->
+        <!-- Barra de navegación con iconos y nombres -->
         <div class="barra-nav">
-            <div class="nav-item nueva-pagina" onclick="abrirPagina('Home')">
+            <div class="nav-item" onclick="abrirPagina('Home')">
                 <i class="bi bi-house-fill"></i>
                 <span>Home</span>
             </div>
-            <div class="nav-item nueva-pagina" onclick="abrirPagina('Juegos')">
+            <div class="nav-item" onclick="abrirPagina('Juegos')">
                 <i class="bi bi-controller"></i>
                 <span>Juegos</span>
             </div>
-            <div class="nav-item nueva-pagina" onclick="abrirPagina('Anime')">
+            <div class="nav-item" onclick="abrirPagina('Anime')">
                 <i class="bi bi-tv"></i>
                 <span>Anime</span>
             </div>
-            <div class="nav-item nueva-pagina" onclick="abrirPagina('Películas')">
+            <div class="nav-item" onclick="abrirPagina('Películas')">
                 <i class="bi bi-film"></i>
                 <span>Películas</span>
             </div>
-            <div class="nav-item nueva-pagina" onclick="abrirPagina('PC')">
+            <div class="nav-item" onclick="abrirPagina('PC')">
                 <i class="bi bi-pc-display"></i>
                 <span>PC</span>
             </div>
-            <div class="nav-item nueva-pagina" onclick="abrirPagina('Mercy')">
+            <div class="nav-item" onclick="abrirPagina('Mercy')">
                 <i class="bi bi-heart-pulse"></i>
                 <span>Mercy</span>
             </div>
@@ -137,10 +136,10 @@
     </div>
 
     <script>
-        // Función para abrir página en blanco
+        // Función que abre cada sección en página en blanco
         function abrirPagina(nombre) {
-            const ventana = window.open("", "_blank");
-            ventana.document.write(`
+            const nuevaVentana = window.open("", "_blank");
+            nuevaVentana.document.write(`
                 <!DOCTYPE html>
                 <html lang="es" style="margin:0; padding:0; background:#ffffff;">
                 <head>
@@ -151,7 +150,7 @@
                 <body></body>
                 </html>
             `);
-            ventana.document.close();
+            nuevaVentana.document.close();
         }
     </script>
 </body>
