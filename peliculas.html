@@ -24,7 +24,7 @@
             position: relative;
         }
 
-        /* Misma proporción del resto de páginas */
+        /* Contenedor con las mismas proporciones */
         .contenedor {
             width: 100%;
             height: calc(100vh - 110px);
@@ -32,14 +32,15 @@
             align-items: stretch;
         }
 
-        /* ✅ Imagen centrada correctamente */
+        /* ✅ Imagen CENTRADA totalmente, tal como la enviaste */
         .lado-imagen {
             width: 45%;
             height: 100%;
             background: url('7b9c90bac1ed97426b342427ba5d9dd5.jpg') center center / cover no-repeat;
+            background-position: center center;
         }
 
-        /* Zona de texto */
+        /* Zona del texto */
         .lado-texto {
             width: 55%;
             height: 100%;
@@ -51,7 +52,7 @@
             text-align: justify;
         }
 
-        /* Cuadro épico */
+        /* Cuadro decorativo */
         .cuadro-texto {
             width: 100%;
             padding: 2rem;
@@ -84,7 +85,7 @@
             width: 100%;
         }
 
-        /* Botón con enlace */
+        /* Botón funcional */
         .boton {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -106,7 +107,7 @@
             box-shadow: 0 0 22px rgba(255, 0, 0, 0.7);
         }
 
-        /* Barra de navegación idéntica */
+        /* Barra de navegación igual al resto */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
