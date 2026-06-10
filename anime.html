@@ -24,7 +24,7 @@
             position: relative;
         }
 
-        /* Contenedor sin cambios */
+        /* Contenedor igual al original */
         .contenedor {
             width: 100%;
             height: calc(100vh - 110px);
@@ -39,7 +39,7 @@
             background: url('ea557993966a4e18928efd28be68f90f.jpg') center left / cover no-repeat;
         }
 
-        /* Texto: ajustado para mejor proporción */
+        /* Lado del texto: centrado verticalmente, justificado */
         .lado-texto {
             width: 55%;
             height: 100%;
@@ -48,25 +48,27 @@
             justify-content: center;
             align-items: flex-end;
             padding: 1.5rem 2.5rem;
-            text-align: right;
+            text-align: justify; /* ✅ Justificado igual que en Word */
         }
 
-        /* ✅ Título reducido */
+        /* Título: sigue alineado a la derecha */
         .titulo {
             font-size: clamp(26px, 6vw, 36px);
             font-weight: 500;
             margin-bottom: 2rem;
             line-height: 1.1;
+            text-align: right;
         }
 
-        /* ✅ Texto descriptivo más pequeño y ajustado */
+        /* Texto: tamaño reducido, justificado y espaciado correcto */
         .descripcion {
             font-size: clamp(14px, 3.5vw, 19px);
-            line-height: 1.6;
+            line-height: 1.65;
             font-weight: 400;
+            hyphens: auto; /* Mejora la separación de sílabas */
         }
 
-        /* Barra de navegación SIN CAMBIOS */
+        /* Barra de navegación SIN MODIFICACIONES */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -120,12 +122,7 @@
         <div class="lado-texto">
             <h1 class="titulo">Anime<br>Series</h1>
             <p class="descripcion">
-Si te gusta el Anime, aquí<br>
-podrás encontrar una gran<br>
-variedad, solo debes darle<br>
-click al botón, para ir<br>
-directo al sitio web que<br>
-recomendamos.
+                Si te gusta el Anime, aquí podrás encontrar una gran variedad, solo debes darle click al botón, para ir directo al sitio web que recomendamos.
             </p>
         </div>
     </div>
