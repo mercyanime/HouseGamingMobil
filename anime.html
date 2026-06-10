@@ -24,7 +24,7 @@
             position: relative;
         }
 
-        /* Contenedor igual */
+        /* Contenedor principal */
         .contenedor {
             width: 100%;
             height: calc(100vh - 110px);
@@ -32,14 +32,14 @@
             align-items: stretch;
         }
 
-        /* Imagen igual */
+        /* Imagen */
         .lado-imagen {
             width: 45%;
             height: 100%;
             background: url('ea557993966a4e18928efd28be68f90f.jpg') center left / cover no-repeat;
         }
 
-        /* Texto justificado */
+        /* Lado de texto: centrado, justificado y más compacto */
         .lado-texto {
             width: 55%;
             height: 100%;
@@ -51,38 +51,41 @@
             text-align: justify;
         }
 
-        /* Título en una sola línea, justificado */
+        /* Título: en una sola línea, centrado */
         .titulo {
-            font-size: clamp(28px, 6vw, 38px);
+            font-size: clamp(26px, 6vw, 34px);
             font-weight: 500;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-            text-align: justify;
+            margin-bottom: 1.8rem;
+            line-height: 1;
+            text-align: center;
             width: 100%;
         }
 
-        /* Párrafo ajustado */
+        /* Párrafo: letra más pequeña, justificado, espaciado normal */
         .descripcion {
-            font-size: clamp(15px, 3.5vw, 20px);
-            line-height: 1.7;
+            font-size: clamp(14px, 3.2vw, 18px);
+            line-height: 1.6;
             font-weight: 400;
             hyphens: auto;
-            margin-bottom: 2.5rem;
+            word-spacing: normal;
+            margin-bottom: 2.2rem;
             width: 100%;
         }
 
-        /* Botón bonito */
+        /* Botón */
         .boton {
-            padding: 0.9rem 2.2rem;
-            font-size: clamp(16px, 4vw, 21px);
+            padding: 0.8rem 2rem;
+            font-size: clamp(15px, 3.8vw, 20px);
             font-weight: 500;
             color: #ffffff;
-            background: linear-gradient(135deg, #8b0000, #ff2222);
+            background: linear-gradient(135deg, #990000, #ff1a1a);
             border: none;
             border-radius: 10px;
             text-decoration: none;
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
             transition: all 0.3s ease;
+            min-width: 180px;
+            text-align: center;
         }
 
         .boton:hover {
@@ -90,7 +93,7 @@
             box-shadow: 0 0 22px rgba(255, 0, 0, 0.7);
         }
 
-        /* Barra de navegación SIN CAMBIOS */
+        /* Barra de navegación sin cambios */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
