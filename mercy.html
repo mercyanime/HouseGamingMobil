@@ -31,7 +31,7 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Cabecera con imagen y texto */
+        /* Imagen configurada correctamente */
         .cabecera {
             display: flex;
             align-items: flex-start;
@@ -44,7 +44,10 @@
             height: 120px;
             border-radius: 20px;
             object-fit: cover;
+            object-position: center;
             flex-shrink: 0;
+            border: 1px solid rgba(255,255,255,0.15);
+            background-color: #111;
         }
 
         .texto-presentacion {
@@ -54,7 +57,6 @@
             margin-top: 0.3rem;
         }
 
-        /* Información del proyecto */
         .info-proyecto h2 {
             font-size: clamp(30px, 7vw, 42px);
             font-weight: 600;
@@ -68,7 +70,7 @@
             color: #e0e0e0;
         }
 
-        /* Botones de navegación */
+        /* Botones */
         .botones-secciones {
             display: flex;
             flex-direction: column;
@@ -94,7 +96,7 @@
             transform: scale(1.03);
         }
 
-        /* ✅ Barra de navegación igual a todas las páginas */
+        /* Barra de navegación simple */
         .barra-nav {
             position: absolute;
             bottom: clamp(4%, 6vh, 8%);
@@ -143,27 +145,30 @@
 <body>
     <div class="contenedor">
 
-        <!-- Presentación Mercy -->
+        <!-- Imagen con nombre EXACTO que diste -->
         <div class="cabecera">
-            <img src="Screenshot_20260610-130037.jpg" alt="Mercy" class="foto-mercy">
+            <img 
+                src="Screenshot_20260610-130037.jpg" 
+                alt="Foto de Mercy" 
+                class="foto-mercy"
+                loading="lazy"
+            >
             <div class="texto-presentacion">
                 Soy Mercy, tengo título en Comunicación digital usando solo IA es posible crear esta página web.
             </div>
         </div>
 
-        <!-- Información HouseGaming -->
         <div class="info-proyecto">
             <h2>HouseGaming</h2>
             <p>Nació como una idea de uno de mis familiares así que decidí apoyar con mis conocimientos, puedes visitarnos en el barrio Intipungo. Av. Vicente Rocafuerte y Cristóbal Colón</p>
         </div>
 
-        <!-- Botones para cada apartado -->
+        <!-- Botones actualizados -->
         <div class="botones-secciones">
             <a href="apps.html" class="boton">Apps</a>
             <a href="discord.html" class="boton">Discord</a>
         </div>
 
-        <!-- Barra de navegación -->
         <div class="barra-nav">
             <a href="index.html" class="nav-item home">
                 <i class="bi bi-house-fill"></i>
